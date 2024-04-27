@@ -59,10 +59,10 @@ export default function Counter() {
     <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div className="grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-5">
         <div className="lg:col-span-3">
-          <form className="bg-white px-5">
+          <form className="bg-white px-5 py-12 mt-12">
             <div>
               <div className="border-b border-gray-900/10 pb-12">
-                <h2 className="text-base font-semibold leading-7 text-gray-900">
+                <h2 className="text-2xl font-semibold leading-7 text-gray-900">
                   Personal Information
                 </h2>
                 <p className="mt-1 text-sm leading-6 text-gray-600">
@@ -219,9 +219,24 @@ export default function Counter() {
                 </div>
               </div>
 
+              <div className="mt-6 flex items-center justify-end gap-x-6">
+                <button
+                  type="button"
+                  className="text-sm font-semibold leading-6 text-gray-900"
+                >
+                  Reset
+                </button>
+                <button
+                  type="submit"
+                  className="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                >
+                  Add Address
+                </button>
+              </div>
+
               <div className="border-b border-gray-900/10 pb-12">
                 <h2 className="text-base font-semibold leading-7 text-gray-900">
-                  Address
+                  Addresses
                 </h2>
                 <p className="mt-1 text-sm leading-6 text-gray-600">
                   Chosse from Existing addresses
@@ -306,25 +321,10 @@ export default function Counter() {
                 </div>
               </div>
             </div>
-
-            <div className="mt-6 flex items-center justify-end gap-x-6">
-              <button
-                type="button"
-                className="text-sm font-semibold leading-6 text-gray-900"
-              >
-                Cancel
-              </button>
-              <button
-                type="submit"
-                className="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-              >
-                Save
-              </button>
-            </div>
           </form>
         </div>
         <div className="lg:col-span-2">
-          <div className="mx-auto mt-12 bg-white max-w-7xl px-4 sm:px6 lg:px-8">
+          <div className="mx-auto mt-12 bg-white max-w-7xl px-4 px-0 sm:px-0 lg:px-0">
             <div className="border-t border-gray-200 px-4 py-6 sm:px-6">
               <h1 className="text-4xl my-5 font-bold tracking-tight text-gray-900">
                 Card
@@ -391,12 +391,12 @@ export default function Counter() {
                 Shipping and taxes calculated at checkout.
               </p>
               <div className="mt-6">
-                <a
-                  href="#"
+                <Link
+                  to="/pay"
                   className="flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700"
                 >
-                  Checkout
-                </a>
+                  Pay and Order
+                </Link>
               </div>
               <div className="mt-6 flex justify-center text-center text-sm text-gray-500">
                 <p>
